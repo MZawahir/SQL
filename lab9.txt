@@ -1,0 +1,20 @@
+CREATE DATABASE Lab9
+
+USE Lab9
+
+CREATE TABLE Supplier(S_no INT (1), SUP_ID VARCHAR (50) PRIMARY KEY , SUP_Name VARCHAR (50) , SUP_ADD VARCHAR (50) , SUP_NIC INT (15), RANK INT (6));
+
+
+CREATE TABLE Product(Prod_ID VARCHAR(50) PRIMARY KEY,Prod_Name VARCHAR(50),Price_per_Unit FLOAT (4,3));
+
+
+CREATE TABLE Orders(Ord_ID VARCHAR(50) PRIMARY KEY,Prod_ID VARCHAR(50),Qty INT (3),Total_rate INT (6),SUP_ID VARCHAR (50));
+
+
+SELECT s.`SUP_ID` , s.`SUP_Name` FROM Supplier s INNER JOIN Orders O ON s.`SUP_ID` = o.`SUP_ID`;
+
+SELECT P.`Prod_ID` , P.`Prod_Name` FROM Product p INNER JOIN Orders O ON P.`Prod_ID` = o.`Prod_ID` WHERE SUP_ID = 101;
+
+SELECT P.`Prod_ID` , P.`Prod_Name` FROM Product p INNER JOIN Orders O ON P.`Prod_ID` = o.`Prod_ID` WHERE SUP_ID = 1;
+
+SELECT O.`Ord_ID`  FROM Product p INNER JOIN Orders O ON P.`Prod_ID` = o.`Prod_ID` WHERE P.`Prod_Name` = 'Rice';

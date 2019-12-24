@@ -1,0 +1,1 @@
+SELECT Emp_Name, Emp_Sal FROM emp WHERE Emp_Sal ORDER BY Emp_Sal DESC LIMIT 10;

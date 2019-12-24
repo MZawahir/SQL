@@ -1,0 +1,12 @@
+CREATE DATABASE M_O_I_V_E
+
+USE M_O_I_V_E
+
+CREATE TABLE movie(id INT (6), title  VARCHAR(25), yea_r  INT (4), Director VARCHAR(25));
+
+INSERT INTO movie(id,title,yea_r,Director)
+VALUES(1,'Ben hur',2016 , 'Thomas'),
+(2,'Get Smart',2012 , 'Richard Bell'),
+(3,'Spider man', 2009 ,'Tam Morry'),
+(4,'Batman v/s Superman',2015,'Gerald Hond')
+;

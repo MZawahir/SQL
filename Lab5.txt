@@ -1,0 +1,15 @@
+CREATE DATABASE CUSTOMER_D
+
+USE Customer_D
+
+
+CREATE TABLE customer(cust_ID INT (6) , cust_name VARCHAR(25));
+CREATE TABLE product(prod_code INT (6),prod_name VARCHAR (25),unit_price FLOAT (3,2));
+CREATE TABLE Customer_Order(order_code INT (6), order_date DATE, cust_ID INT (6));
+CREATE TABLE Order_Item(order_code INT (6), prod_code INT (6), num_of_units INT (2));
+
+ALTER TABLE customer
+ADD COLUMN contact INT (11);
+
+ALTER TABLE product
+ADD COLUMN company_name VARCHAR(25);

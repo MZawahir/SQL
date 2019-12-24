@@ -1,0 +1,15 @@
+CREATE DATABASE Lab10
+
+USE Lab10
+
+SELECT Emp_Job , AVG (Emp_Sal) FROM emp GROUP BY emp_job;
+
+SELECT Emp_Job ,SUM(Emp_Sal) AS total ,AVG(emp_sal) AS Average
+FROM emp WHERE emp_Job !='Clerk' GROUP BY emp_job;
+
+SELECT Emp_Job ,SUM(Emp_Sal) AS total ,AVG(Emp_Sal) AS Average
+FROM emp WHERE Emp_Job NOT IN('Clerk','manager')  GROUP BY emp_job;
+
+SELECT Emp_Job, COUNT(*),SUM(Emp_Sal) AS total ,AVG(Emp_Sal) AS Average FROM emp WHERE Emp_Job NOT IN('Clerk','Manager')  GROUP BY Emp_Job;
+
+SELECT Dep ,AVG(emp_sal) AS Average_Salary FROM emp  GROUP BY Dep;

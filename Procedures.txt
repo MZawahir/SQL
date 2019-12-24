@@ -1,0 +1,13 @@
+
+
+DELIMITER //
+ 
+CREATE PROCEDURE MaxVal1()
+BEGIN
+    SELECT Bookname, MAX(Price) AS LargestPrice FROM t1;
+END //
+ 
+DELIMITER ;
+
+	
+CALL MaxVal1()

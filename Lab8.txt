@@ -1,0 +1,14 @@
+CREATE DATABASE Lab8
+
+USE Lab8
+
+CREATE TABLE Emp(Emp_num VARCHAR (5) , Emp_Name VARCHAR (15) , Emp_Job VARCHAR (15) , Emp_Sal INT (5));
+
+
+SELECT Emp_num , Emp_Name , Emp_Job FROM Emp;
+
+SELECT Emp_num , Emp_Name , Emp_Job FROM Emp WHERE Emp_Sal > 5000;
+
+SELECT Emp_num , Emp_Name , Emp_Job FROM Emp WHERE Emp_Sal BETWEEN  1000 AND   5000;
+
+SELECT * FROM Emp;
